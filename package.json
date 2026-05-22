@@ -1,0 +1,36 @@
+{
+  "name": "ai-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "dev:all": "turbo dev",
+    "dev:web": "turbo dev --filter=my-web-name",
+    "dev:api": "turbo dev --filter=my-api-name",
+    "dev:full": "concurrently \"pnpm dev:api\" \"pnpm dev:web\"",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "@inquirer/prompts": "^8.1.0",
+    "@manypkg/cli": "^0.25.1",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tsx": "^4.21.0",
+    "turbo": "^2.9.14",
+    "typescript": "^5.9.3"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "packageManager": "pnpm@11.1.3",
+  "engines": {
+    "node": ">=24"
+  }
+}

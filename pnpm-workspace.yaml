@@ -1,0 +1,8 @@
+packages:
+  - 'apps/*'
+engineStrict: false
+strictSsl: false
+nodeLinker: hoisted
+allowBuilds:
+  esbuild: false
+  sharp: true
