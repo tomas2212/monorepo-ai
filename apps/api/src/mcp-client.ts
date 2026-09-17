@@ -27,7 +27,8 @@ export async function queryOllama(prompt: string): Promise<string> {
         // }
       },
       {
-        timeout: 10*60*1000 // 10 min timeout
+        // timeout: 10*60*1000 // 10 min timeout
+        timeout: 60_000 // 1 min timeout
       }
     );
 
